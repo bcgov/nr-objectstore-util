@@ -1,0 +1,27 @@
+{
+    "python.formatting.provider": "black",
+    "cSpell.words": [
+        "ACL's",
+        "ajunk",
+        "boto",
+        "dotenv",
+        "fget",
+        "fput",
+        "hndlr",
+        "minio",
+        "objstor",
+        "Pypi",
+        "rtype",
+        "sdist",
+        "tmpfolder"
+    ],
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "editor.rulers": [
+        79,
+        100
+    ],
+    "editor.hover.enabled": false,
+    "editor.hover.sticky": false,
+    "terminal.integrated.scrollback": 5000
+}
