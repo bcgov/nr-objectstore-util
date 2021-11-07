@@ -1,0 +1,28 @@
+
+
+    # Runs a set of commands using the runners shell
+    - name: Run xenon code quality check
+      run: |
+        pip install -r requirements-dev.txt
+        xenontestsuccess=false
+        xenonout=$(xenon --max-absolute B --max-modules A --max-average A $GITHUB_WORKSPACE  2>&1)
+        if [ -z "$xenonout" ]
+        then
+          xenontestsuccess=true
+        fi
+
+    - name: Build Pypi Package
+      if: success()
+      env:
+        TWINE_USERNAME:  ${{ secrets.TWINE_USERNAME }}
+        TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
+        PKG_TYPE: PROD
+      run: |
+        python3 setup.py sdist bdist_wheel
+        python3 -m twine upload dist/*
+    - name: Retrieve package version from pypi
+      run: |
+        # waiting for 10 seconds to ensure that pypi returns the latest version
+        sleep  10
+        PACKAGE_JSON_URL="https://pypi.org/pypi/bcdc2bcdc/json"
+        echo ::set-env name=TAG_NAME::$(curl -s "$PACKAGE_JSON_URL" | jq  -r '.releases | keys | .[]' | sort -V | tail -1 -)
