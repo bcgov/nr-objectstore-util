@@ -58,6 +58,9 @@ jobs:
         TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
         PKG_TYPE: PROD
       run: |
+        # checkout the pr
+        gh pr checkout ${{ github.event.pull_request.number }}
+
         # bump the version
         VERSION=`hatch version`
         hatch version minor
