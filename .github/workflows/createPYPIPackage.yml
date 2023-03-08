@@ -3,7 +3,7 @@ name: Build PYPI Package
 # trigger on any push to test
 on:
   push:
-  branches: ['main', 'feat/pypi-packaging']
+    branches: ['main', 'feat/pypi-packaging']
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
