@@ -2,15 +2,15 @@
 name: Build PYPI Package
 
 # trigger on any push to test
-# on:
-#   push:
-
+ on:
+   push:
+    branches: ['main', 'feat/pypi-packaging']
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
-on:
-  pull_request:
-    branches: ['main', 'feat/pypi-packaging']
+# on:
+#   pull_request:
+#     branches: ['main', 'feat/pypi-packaging']
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
