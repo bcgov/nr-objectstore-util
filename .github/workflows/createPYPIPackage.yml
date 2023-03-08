@@ -43,7 +43,6 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Run xenon code quality check
       run: |
-        pip install -r requirements-dev.txt
         xenontestsuccess=false
         xenonout=$(xenon --max-absolute B --max-modules A --max-average A $GITHUB_WORKSPACE  2>&1)
         if [ -z "$xenonout" ]
@@ -57,6 +56,7 @@ jobs:
         TWINE_USERNAME:  ${{ secrets.TWINE_USERNAME }}
         TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
         PKG_TYPE: PROD
+        GH_TOKEN: ${{ github.token }}
       run: |
         # checkout the pr
         gh pr checkout ${{ github.event.pull_request.number }}
