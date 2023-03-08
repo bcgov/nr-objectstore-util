@@ -64,9 +64,9 @@ jobs:
         NEW_VERSION=`hatch version`
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git commit -m "Bump version: $VERSION → $NEW_VERSION"
         git add src/NRUtil/__about__.py
         git tag $VERSION
+        git commit -m "Bump version: $VERSION → $NEW_VERSION"
 
         python3 -m build
         python3 -m twine upload dist/*
