@@ -139,3 +139,5 @@ cython_debug/
 
 # misc
 links.txt
+junk/
+venv-test/

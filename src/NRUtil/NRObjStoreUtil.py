@@ -16,7 +16,7 @@ import boto3
 import minio
 import os
 
-import constants
+from . import constants
 
 LOGGER = logging.getLogger(__name__)
 

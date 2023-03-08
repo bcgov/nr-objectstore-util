@@ -1,6 +1,7 @@
-black==21.7b0
-flake8==3.9.2
-xenon==0.8.0
-twine==3.1.1
-distlib==0.3.0
-packaging==20.4
+black==23.1.0
+flake8==6.0.0
+xenon==0.9.0
+twine==4.0.2
+hatch==1.6.3
+hatch-requirements-txt==0.3.0
+build==0.10.0
