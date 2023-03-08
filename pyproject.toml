@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling", "hatch-requirements-txt"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = [
+  "src/*",
+  "requirements.txt"
+  ]
+exclude = [
+  ".github/*",
+  "examples/*",
+  "junk/*",
+  ".gitignore"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/NRUtil"]
+
+[tool.hatch.version]
+path = "src/NRUtil/__about__.py"
+
+
+[project]
+name = "nr_objstore_util"
+authors = [
+  { name="Kevin Netherton", email="kevin.netherton@gov.bc.ca" },
+]
+description = "Utility to bundle commonly used object store operations into an easy to use module"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dynamic = [
+  "version",
+  "dependencies"
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/bcgov/nr-objectstore-util"
+"Bug Tracker" = "https://github.com/bcgov/nr-objectstore-util/issues"
+
+[tool.hatch.metadata.hooks.requirements_txt]
+files = ["requirements.txt"]
