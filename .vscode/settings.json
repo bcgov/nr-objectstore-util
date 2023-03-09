@@ -24,5 +24,15 @@
     "editor.hover.sticky": false,
     "terminal.integrated.scrollback": 5000,
     "files.trimTrailingWhitespace": true,
-    "python.formatting.provider": "black"
+    "python.formatting.provider": "black",
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true,
+      },
+      "python.testing.pytestEnabled": true,
+      "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.cwd": "",
+    "files.eol": "\n",
+    "python.testing.unittestEnabled": false,
 }

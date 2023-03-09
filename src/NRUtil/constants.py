@@ -1,9 +1,10 @@
 """ Declaring constants used by the archive script. """
 
-import os
-import dotenv
-import sys
 import logging
+import os
+import sys
+
+import dotenv
 
 LOGGER = logging.getLogger(__name__)
 

@@ -10,11 +10,11 @@ library that can be imported into other projects.
 
 # Installing
 
-TODO: Fill this in
+`pip install nr_objstore_util`
 
 # Creating an NRObjStoreUtil Object by passing credentials
 
-```
+```python
 import NRObjStoreUtil
 objstor = NRObjStoreUtil.ObjectStoreUtil(
     "name of object store host",
@@ -32,16 +32,28 @@ First populate the following environment variables:
 * OBJ_STORE_USER
 * OBJ_STORE_HOST
 
-Then create the NRObjStoreUtil object without args:
+```bash
+export OBJ_STORE_BUCKET=bucket_name
+export OBJ_STORE_SECRET=sdf3jkllvjiojl;a4sf892ikfjovj
+export OBJ_STORE_USER=ostoreuser
+export OBJ_STORE_HOST=nrs.objectstore.gov.bc.ca
 ```
+
+
+Then create the NRObjStoreUtil object without args:
+```python
 import NRObjStoreUtil
 objstor = NRObjStoreUtil.ObjectStoreUtil()
 ```
 
-# other methods summary:
+# Examples
 
-getObject - used to copy an object from object store to filesystem
+... see the examples folder for examples
+
+**getObject** - used to copy an object from object store to filesystem
+
 putObject - copy file from filesystem to object store.
+
 listObjects - list objects in a bucket / directory
 logObjectProperties - write object properties to the logs
 getObjAsDict - takes any python object and converts it to a dict (debugging)
