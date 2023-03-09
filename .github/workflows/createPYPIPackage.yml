@@ -37,7 +37,6 @@ jobs:
       with:
         python-version: '3.11'
 
-
     # Runs a single command using the runners shell
     #   sudo apt-get install jq
     - name: install build requirements
