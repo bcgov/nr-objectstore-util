@@ -5,3 +5,5 @@ twine==4.0.2
 hatch==1.6.3
 hatch-requirements-txt==0.3.0
 build==0.10.0
+pytest==7.2.2
+python-dotenv==1.0.0
