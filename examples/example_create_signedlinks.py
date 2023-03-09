@@ -1,6 +1,6 @@
 # passing params manually in
 
-import NRObjStoreUtil
+import NRUtil.NRObjStoreUtil as NRObjStoreUtil
 
 objstor = NRObjStoreUtil.ObjectStoreUtil()
 # inDir is  the directory to be listed

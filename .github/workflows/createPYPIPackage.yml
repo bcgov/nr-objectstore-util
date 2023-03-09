@@ -9,7 +9,7 @@ name: Build PYPI Package
 # events but only for the master branch
 on:
   pull_request:
-    branches: ['main', 'feat/pypi-packaging']
+    branches: ['main']
     paths-ignore:
       - 'README.md'
       - 'tests/*'
