@@ -52,16 +52,3 @@ objstor = NRObjStoreUtil.ObjectStoreUtil()
 
 ... see the examples folder for examples
 
-**getObject** - used to copy an object from object store to filesystem
-
-putObject - copy file from filesystem to object store.
-
-listObjects - list objects in a bucket / directory
-logObjectProperties - write object properties to the logs
-getObjAsDict - takes any python object and converts it to a dict (debugging)
-setPublicPermissions - makes an object public
-setObjContentType - modify an objects content type
-getForceDownloadHeaders - Gets headers that should be applied to an object to
-                          force download when the object link is presented in
-                          a browser.  Works in concert with getPresignedUrl()
-
