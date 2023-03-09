@@ -17,7 +17,7 @@ library that can be imported into other projects.
 # Creating an NRObjStoreUtil Object by passing credentials
 
 ```python
-import NRObjStoreUtil
+import NRUtil.NRObjStoreUtil as NRObjStoreUtil
 objstor = NRObjStoreUtil.ObjectStoreUtil(
     "name of object store host",
     "object store user / access",
@@ -44,7 +44,7 @@ export OBJ_STORE_HOST=nrs.objectstore.gov.bc.ca
 
 Then create the NRObjStoreUtil object without args:
 ```python
-import NRObjStoreUtil
+import NRUtil.NRObjStoreUtil as NRObjStoreUtil
 objstor = NRObjStoreUtil.ObjectStoreUtil()
 ```
 
