@@ -39,15 +39,12 @@ dynamic = [
   "dependencies"
 ]
 
-
 [project.urls]
 "Homepage" = "https://github.com/bcgov/nr-objectstore-util"
 "Bug Tracker" = "https://github.com/bcgov/nr-objectstore-util/issues"
 
 [tool.hatch.metadata.hooks.requirements_txt]
 files = ["requirements.txt"]
-
-
 
 [tool.pytest.ini_options]
 minversion = "6.0"
@@ -60,3 +57,6 @@ log_cli = true
 log_cli_level = "DEBUG"
 log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
 log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+
+[tool.black]
+line-length = 88
