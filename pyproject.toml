@@ -18,6 +18,7 @@ exclude = [
 packages = ["src/NRUtil"]
 
 [tool.hatch.version]
+#path = "src/NRUtil/__about__.py"
 path = "src/NRUtil/__about__.py"
 
 
