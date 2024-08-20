@@ -90,6 +90,7 @@ jobs:
         python3 -m twine upload dist/*
 
         # git push
-        # git push --tags
+        git tag $next_ver
+        git push --tags
 
     # notes on publication / autoversioning: https://waylonwalker.com/hatch-version/
