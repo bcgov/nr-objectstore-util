@@ -26,8 +26,8 @@
     "files.trimTrailingWhitespace": true,
     "python.formatting.provider": "black",
     "editor.codeActionsOnSave": {
-        "source.organizeImports": true,
-      },
+        "source.organizeImports": "explicit"
+    },
       "python.testing.pytestEnabled": true,
       "python.testing.pytestArgs": [
         "tests"

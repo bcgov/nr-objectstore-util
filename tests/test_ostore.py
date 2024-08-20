@@ -40,6 +40,12 @@ def test_list_objects(ostore_w_data, properties):
 
     assert properties["test_file_full_path"] in obj_list
 
+    # LOGGER.debug("getting large directory... ")
+    # obj_list = ostore_w_data.list_objects(
+    #     objstore_dir="snowpack_archive", return_file_names_only=True
+    # )
+
+
 
 def test_make_public(ostore_w_data, properties):
     ostore = ostore_w_data
